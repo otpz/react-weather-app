@@ -1,7 +1,6 @@
 # This apps' live address -> https://otpz.github.io/react-weather-app/
 
-
-
+![weather-app](https://user-images.githubusercontent.com/109739566/222978879-d4e79e82-dd9f-4766-8808-57e5f63ad6ca.PNG)
 
 # Getting Started with Create React App
 
