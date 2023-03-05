@@ -1,38 +1,275 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+.container{
+  background-color: #ffffff;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: baseline;
+  color: rgb(6, 1, 54);
+  font-family: 'Poppins', sans-serif;
+}
+.loading{
+  width: 100%;
+  height: 100vh;
+  display:flex ;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  font-size: 40px;
+  font-weight: 900;
+}
+.date-soft{
+  width: 100%;
+  max-width: 1410px;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+}
+.weather-content{
+  width: 180px;
+  height:250px;
+  padding: 45px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(7, 0, 30, 0.2);
+  border-radius: 1.125rem;
+  cursor: pointer;
+  transition: 0.20s ease-in-out all;
+}
+
+.weather-content:hover{
+  transition: 0.20s ease-in-out all;
+  background-color: rgba(92, 0, 167, 0.03);
+  -webkit-box-shadow: inset 0px 0px 2px 0.1px rgba(92, 0, 167, 0.262);
+  -moz-box-shadow: inset 0px 0px 2px 0.1px rgba(92, 0, 167, 0.262);
+  box-shadow: inset 0px 0px 2px 0.1px rgba(92, 0, 167, 0.262);
+}
+
+.weather-content.active{
+  background-color: rgba(92, 0, 167, 0.262);
+  border: 1px solid rgb(92, 0, 167);
+  -webkit-box-shadow: inset 0px 0px 8px 1px rgba(92, 0, 167, 0.262);
+  -moz-box-shadow: inset 0px 0px 8px 1px rgba(92, 0, 167, 0.262);
+  box-shadow: inset 0px 0px 8px 1px rgba(92, 0, 167, 0.262);
+  /* border: none; */
+}
+.mid-header{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+.mid-section{
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mid-section .images{
+  width: 150px;
+}
+.deg{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+}
+.deg .dark {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.deg .soft{
+  font-size: 20px;
+  font-weight: 700;
+  color: rgba(40, 40, 40, 0.881)
+}
+.mini-info{
+  margin-top: 10px;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content:  space-around;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(40, 40, 40, 0.881)
+}
+
+.header-content{
+  width: 1410px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.header{
+  width: 100%;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+  color: rgb(33, 0, 60);
+}
+
+.weather-header-content{
+  width: 100%;
+  height: 100px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid black; */
+}
+.weather-header-content .header-mid-section{
+  width: 600px;
+  height: 150px;
+  /* padding: 35px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+}
+/* rgba(92, 0, 167, 0.152) */
+.header-mid-section .mid-section-div{
+  width: 550px;
+  height: 130px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  background-color: rgba(92, 0, 167, 0.152);
+  border-radius: 10px;
+}
+.mid-section-all-top{
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: baseline;
+}
+.mid-section-top{
+  width: 145px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.mid-section-top .mid-header{
+  width: 100px;
+}
+.mid-section-bottom{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.mid-section-bottom span{
+  font-size: 2rem;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.mid-section-bottom .soft{
+  font-size: 20px;
+  font-weight: 700;
+  color: rgba(40, 40, 40, 0.881)
+}
+.mid-section-all-bottom{
+  width: 250px;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: space-around;
+}
+.mid-section-all-bottom span{
+  font-size: 18px;
+  font-weight: 400;
+}
+.weather-info-div{
+  font-size: 24px;
+  font-weight: 600;
+}
+.weather-info{
+  width: 210px;
+  height: 100px;
+  padding: 15px 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around ;
+  align-items: baseline;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.weather-info h3{
+  margin: 0;
+  padding: 0;
+}
+.form{
+  width: 210px;
+  height: 100px;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: baseline;
+  border: 1px solid rgb(92, 0, 167);
+  border-radius: 10px;
+}
+.form label{
+  font-size: 20px;
+  font-weight: 700;
+  color:rgb(6, 1, 54);
+}
+.form select{
+  width: 150px;
+  height: 30px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+}
+.current-city{
+  font-size: 20px;
+  font-weight: 600;
+  color: purple;
+}
+.footer{
+  width: 100%;
+  height: 71px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.footer .footer-div{
+  width: 600px;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer-div a{
+  color: white;
+  text-decoration:underline;
 }
