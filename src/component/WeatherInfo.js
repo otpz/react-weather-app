@@ -18,7 +18,7 @@ function WeatherInfo(){
                   {
                     dayObj.map(item => item.day[0] === new Date(data.dt * 1000).toString().split(" ")[0] ? item.day[1] : null)
                   }
-                </h3> 
+                </h3>  
                 <div className='mid-section'>
                   <img
                     className="images"
